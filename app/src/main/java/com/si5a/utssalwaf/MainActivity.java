@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etnama = findViewById(R.id.et_nama);
+        etnama = findViewById(R.id.et_nama_lengkap);
         etnomor_pendaftaran = findViewById(R.id.et_nomor_pendaftaran);
         sp_Jalur_Pendaftaran = findViewById(R.id.sp_Jalur_Pendaftaran);
         cb_Konfirmasi = findViewById(R.id.cb_Konfirmasi);

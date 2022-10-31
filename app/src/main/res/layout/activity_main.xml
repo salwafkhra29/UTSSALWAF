@@ -18,30 +18,34 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:textSize="26sp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"/>
+
     <EditText
-        android:id="@+id/et_nama"
+        android:id="@+id/et_nama_lengkap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_judul"
         android:hint="Nama Lengkap"
         android:inputType="text"
-        android:layout_below="@+id/tv_judul"/>
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/et_nomor_pendaftaran"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/et_nama"
+        android:layout_below="@id/et_nama_lengkap"
         android:layout_marginTop="8dp"
         android:hint="Nomor Pendaftaran"
         android:inputType="number"
         android:minHeight="48dp" />
+
     <Spinner
         android:id="@+id/sp_Jalur_Pendaftaran"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/et_nomor_pendaftaran"
         android:layout_marginTop="8dp"
         android:entries="@array/arr_jenispendaftaran"
-        android:layout_below="@id/et_nomor_pendaftaran" />
+        android:minHeight="48dp" />
 
     <CheckBox
         android:id="@+id/cb_Konfirmasi"
