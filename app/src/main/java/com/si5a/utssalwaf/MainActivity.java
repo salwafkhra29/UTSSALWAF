@@ -3,8 +3,13 @@ package com.si5a.utssalwaf;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    private Button btnDaftar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -12,7 +17,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnDaftar = findViewById(R.id.btn_daftar);
-        btnDaftar
+        btnDaftar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Anda Sudah Terdaftar!", Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 }
