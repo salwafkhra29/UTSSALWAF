@@ -2,6 +2,7 @@ package com.si5a.utssalwaf;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -32,7 +33,26 @@ public class MainActivity extends AppCompatActivity {
         btnDaftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Anda Sudah Terdaftar!", Toast.LENGTH_SHORT).show();
+                String nama, jpendaftaran, npendaftaran;
+
+                nama = etnama.getText().toString();
+                jpendaftaran = sp_Jalur_Pendaftaran.getSelectedItem().toString();
+                npendaftaran = etnomor_pendaftaran.getText().toString();
+
+                if (nama.trim().equals("")){
+                    etnama.setError("Nama Tidak Boleh Kosong");
+                }
+                else if(npendaftaran.trim().equals("")){
+                    etnomor_pendaftaran.setError("Nomor Pendaftaran Tidak Boleh Kosong");
+                }
+                else{
+                    Intent intent = new
+                            Intent(MainActivity.this, SecondActivity.class);
+                    intent.putExtra("varNo", npendaftaran);
+                    intent.putExtra("varNama", nama);
+                    intent.putExtra("varJpendaftaran", jpendaftaran);
+                    startActivity(intent);
+                }
             }
         });
 
