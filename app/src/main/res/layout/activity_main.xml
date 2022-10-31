@@ -16,7 +16,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:text="FORMULIR PENDAFTARAN"
         android:textStyle="bold"
         android:textSize="20sp"
-        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"/>
     <EditText
         android:id="@+id/et_nama"
@@ -37,6 +37,13 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/et_nomor_pendaftaran" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_nomor_pendaftaran"
+        android:layout_marginTop="20dp"
+        android:text="Konfirmasi Daftar"/>
     <Button
         android:id="@+id/btn_daftar"
         android:layout_width="match_parent"
@@ -44,5 +51,5 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_marginTop="30dp"
         android:text="DAFTAR"
         android:layout_below="@id/sp_Jalur_Pendaftaran"/>
-    
+
 </RelativeLayout>
